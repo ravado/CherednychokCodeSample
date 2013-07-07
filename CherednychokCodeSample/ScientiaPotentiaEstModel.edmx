@@ -1,0 +1,1253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ScientiaPotentiaEstModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ScientiaPotentiaEstModelStoreContainer">
+          <EntitySet Name="Answers" EntityType="ScientiaPotentiaEstModel.Store.Answers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Assign" EntityType="ScientiaPotentiaEstModel.Store.Assign" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Groups" EntityType="ScientiaPotentiaEstModel.Store.Groups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Moduls" EntityType="ScientiaPotentiaEstModel.Store.Moduls" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Profiles" EntityType="ScientiaPotentiaEstModel.Store.Profiles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Questions" EntityType="ScientiaPotentiaEstModel.Store.Questions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RatingScale" EntityType="ScientiaPotentiaEstModel.Store.RatingScale" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="ScientiaPotentiaEstModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subjects" EntityType="ScientiaPotentiaEstModel.Store.Subjects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TestAnswers" EntityType="ScientiaPotentiaEstModel.Store.TestAnswers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TestQuestions" EntityType="ScientiaPotentiaEstModel.Store.TestQuestions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tests" EntityType="ScientiaPotentiaEstModel.Store.Tests" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="ScientiaPotentiaEstModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsersRoles" EntityType="ScientiaPotentiaEstModel.Store.UsersRoles" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Answers_Questions" Association="ScientiaPotentiaEstModel.Store.FK_Answers_Questions">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="Answers" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Groups" Association="ScientiaPotentiaEstModel.Store.FK_Assign_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Moduls" Association="ScientiaPotentiaEstModel.Store.FK_Assign_Moduls">
+            <End Role="Moduls" EntitySet="Moduls" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Profiles" Association="ScientiaPotentiaEstModel.Store.FK_Assign_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Users" Association="ScientiaPotentiaEstModel.Store.FK_Assign_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Moduls_Subjects" Association="ScientiaPotentiaEstModel.Store.FK_Moduls_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Moduls" EntitySet="Moduls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Questions_Moduls" Association="ScientiaPotentiaEstModel.Store.FK_Questions_Moduls">
+            <End Role="Moduls" EntitySet="Moduls" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RatingScale_Profiles" Association="ScientiaPotentiaEstModel.Store.FK_RatingScale_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="RatingScale" EntitySet="RatingScale" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestAnswers_Answers" Association="ScientiaPotentiaEstModel.Store.FK_TestAnswers_Answers">
+            <End Role="Answers" EntitySet="Answers" />
+            <End Role="TestAnswers" EntitySet="TestAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestAnswers_TestQuestions" Association="ScientiaPotentiaEstModel.Store.FK_TestAnswers_TestQuestions">
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+            <End Role="TestAnswers" EntitySet="TestAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestQuestions_Questions" Association="ScientiaPotentiaEstModel.Store.FK_TestQuestions_Questions">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestQuestions_Tests" Association="ScientiaPotentiaEstModel.Store.FK_TestQuestions_Tests">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Moduls" Association="ScientiaPotentiaEstModel.Store.FK_Tests_Moduls">
+            <End Role="Moduls" EntitySet="Moduls" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Profiles" Association="ScientiaPotentiaEstModel.Store.FK_Tests_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Student" Association="ScientiaPotentiaEstModel.Store.FK_Tests_Student">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Teacher" Association="ScientiaPotentiaEstModel.Store.FK_Tests_Teacher">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Groups" Association="ScientiaPotentiaEstModel.Store.FK_Users_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersRoles_Roles" Association="ScientiaPotentiaEstModel.Store.FK_UsersRoles_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UsersRoles" EntitySet="UsersRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersRoles_Users" Association="ScientiaPotentiaEstModel.Store.FK_UsersRoles_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UsersRoles" EntitySet="UsersRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionID" Type="int" Nullable="false" />
+          <Property Name="OrdinalNumber" Type="int" Nullable="false" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Significance" Type="int" Nullable="false" />
+          <Property Name="Group" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Assign">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupID" Type="int" Nullable="false" />
+          <Property Name="TeacherID" Type="int" Nullable="false" />
+          <Property Name="ProfileID" Type="int" Nullable="false" />
+          <Property Name="ModulID" Type="int" Nullable="false" />
+          <Property Name="TestDate" Type="datetime2" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Moduls">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profiles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+          <Property Name="TimeLimit" Type="int" Nullable="false" />
+          <Property Name="ShuffleQuestions" Type="int" Nullable="false" />
+          <Property Name="ShuffleAnswers" Type="int" Nullable="false" />
+          <Property Name="QuestionsCount" Type="int" Nullable="false" />
+          <Property Name="MarkType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrdinalNumber" Type="int" Nullable="false" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Significance" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="ModulID" Type="int" Nullable="false" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+          <Property Name="Explanation" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RatingScale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProfileID" Type="int" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LowBound" Type="numeric" Nullable="false" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestAnswers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TestQuestionID" Type="int" Nullable="false" />
+          <Property Name="AnswerID" Type="int" />
+          <Property Name="OrdinalNumber" Type="int" Nullable="false" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestQuestions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TestID" Type="int" Nullable="false" />
+          <Property Name="QuestionID" Type="int" Nullable="false" />
+          <Property Name="OrdinalNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tests">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ModulID" Type="int" Nullable="false" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="TeacherID" Type="int" Nullable="false" />
+          <Property Name="ProfileID" Type="int" Nullable="false" />
+          <Property Name="Mode" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime2" />
+          <Property Name="Duration" Type="bigint" Nullable="false" />
+          <Property Name="Rating" Type="numeric" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="TotalRating" Type="numeric" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="TotalQuestions" Type="int" Nullable="false" />
+          <Property Name="TotalAnswers" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nchar" Nullable="false" MaxLength="20" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="CanceledMark" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="MiddleName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="GroupID" Type="int" />
+        </EntityType>
+        <EntityType Name="UsersRoles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Answers_Questions">
+          <End Role="Questions" Type="ScientiaPotentiaEstModel.Store.Questions" Multiplicity="1" />
+          <End Role="Answers" Type="ScientiaPotentiaEstModel.Store.Answers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Answers">
+              <PropertyRef Name="QuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Groups">
+          <End Role="Groups" Type="ScientiaPotentiaEstModel.Store.Groups" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Store.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Moduls">
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Store.Moduls" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Store.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moduls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="ModulID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Profiles">
+          <End Role="Profiles" Type="ScientiaPotentiaEstModel.Store.Profiles" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Store.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Users">
+          <End Role="Users" Type="ScientiaPotentiaEstModel.Store.Users" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Store.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Moduls_Subjects">
+          <End Role="Subjects" Type="ScientiaPotentiaEstModel.Store.Subjects" Multiplicity="1" />
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Store.Moduls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Moduls">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Questions_Moduls">
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Store.Moduls" Multiplicity="1" />
+          <End Role="Questions" Type="ScientiaPotentiaEstModel.Store.Questions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moduls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="ModulID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RatingScale_Profiles">
+          <End Role="Profiles" Type="ScientiaPotentiaEstModel.Store.Profiles" Multiplicity="1" />
+          <End Role="RatingScale" Type="ScientiaPotentiaEstModel.Store.RatingScale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RatingScale">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestAnswers_Answers">
+          <End Role="Answers" Type="ScientiaPotentiaEstModel.Store.Answers" Multiplicity="0..1" />
+          <End Role="TestAnswers" Type="ScientiaPotentiaEstModel.Store.TestAnswers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Answers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestAnswers">
+              <PropertyRef Name="AnswerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestAnswers_TestQuestions">
+          <End Role="TestQuestions" Type="ScientiaPotentiaEstModel.Store.TestQuestions" Multiplicity="1" />
+          <End Role="TestAnswers" Type="ScientiaPotentiaEstModel.Store.TestAnswers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestQuestions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestAnswers">
+              <PropertyRef Name="TestQuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestQuestions_Questions">
+          <End Role="Questions" Type="ScientiaPotentiaEstModel.Store.Questions" Multiplicity="1" />
+          <End Role="TestQuestions" Type="ScientiaPotentiaEstModel.Store.TestQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="QuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestQuestions_Tests">
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Store.Tests" Multiplicity="1" />
+          <End Role="TestQuestions" Type="ScientiaPotentiaEstModel.Store.TestQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="TestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Moduls">
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Store.Moduls" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Store.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moduls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ModulID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Profiles">
+          <End Role="Profiles" Type="ScientiaPotentiaEstModel.Store.Profiles" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Store.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Student">
+          <End Role="Users" Type="ScientiaPotentiaEstModel.Store.Users" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Store.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Teacher">
+          <End Role="Users" Type="ScientiaPotentiaEstModel.Store.Users" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Store.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Groups">
+          <End Role="Groups" Type="ScientiaPotentiaEstModel.Store.Groups" Multiplicity="0..1" />
+          <End Role="Users" Type="ScientiaPotentiaEstModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersRoles_Roles">
+          <End Role="Roles" Type="ScientiaPotentiaEstModel.Store.Roles" Multiplicity="1" />
+          <End Role="UsersRoles" Type="ScientiaPotentiaEstModel.Store.UsersRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsersRoles">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersRoles_Users">
+          <End Role="Users" Type="ScientiaPotentiaEstModel.Store.Users" Multiplicity="1" />
+          <End Role="UsersRoles" Type="ScientiaPotentiaEstModel.Store.UsersRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsersRoles">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ScientiaPotentiaEstModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ScientiaPotentiaEstEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Answers" EntityType="ScientiaPotentiaEstModel.Answer" />
+          <EntitySet Name="Assign" EntityType="ScientiaPotentiaEstModel.Assign" />
+          <EntitySet Name="Groups" EntityType="ScientiaPotentiaEstModel.Group" />
+          <EntitySet Name="Moduls" EntityType="ScientiaPotentiaEstModel.Modul" />
+          <EntitySet Name="Profiles" EntityType="ScientiaPotentiaEstModel.Profile" />
+          <EntitySet Name="Questions" EntityType="ScientiaPotentiaEstModel.Question" />
+          <EntitySet Name="RatingScales" EntityType="ScientiaPotentiaEstModel.RatingScale" />
+          <EntitySet Name="Roles" EntityType="ScientiaPotentiaEstModel.Role" />
+          <EntitySet Name="Subjects" EntityType="ScientiaPotentiaEstModel.Subject" />
+          <EntitySet Name="TestAnswers" EntityType="ScientiaPotentiaEstModel.TestAnswer" />
+          <EntitySet Name="TestQuestions" EntityType="ScientiaPotentiaEstModel.TestQuestion" />
+          <EntitySet Name="Tests" EntityType="ScientiaPotentiaEstModel.Test" />
+          <EntitySet Name="Users" EntityType="ScientiaPotentiaEstModel.User" />
+          <AssociationSet Name="FK_Answers_Questions" Association="ScientiaPotentiaEstModel.FK_Answers_Questions">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="Answers" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestAnswers_Answers" Association="ScientiaPotentiaEstModel.FK_TestAnswers_Answers">
+            <End Role="Answers" EntitySet="Answers" />
+            <End Role="TestAnswers" EntitySet="TestAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Groups" Association="ScientiaPotentiaEstModel.FK_Assign_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Moduls" Association="ScientiaPotentiaEstModel.FK_Assign_Moduls">
+            <End Role="Moduls" EntitySet="Moduls" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Profiles" Association="ScientiaPotentiaEstModel.FK_Assign_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assign_Users" Association="ScientiaPotentiaEstModel.FK_Assign_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Assign" EntitySet="Assign" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Groups" Association="ScientiaPotentiaEstModel.FK_Users_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Moduls_Subjects" Association="ScientiaPotentiaEstModel.FK_Moduls_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Moduls" EntitySet="Moduls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Questions_Moduls" Association="ScientiaPotentiaEstModel.FK_Questions_Moduls">
+            <End Role="Moduls" EntitySet="Moduls" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Moduls" Association="ScientiaPotentiaEstModel.FK_Tests_Moduls">
+            <End Role="Moduls" EntitySet="Moduls" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RatingScale_Profiles" Association="ScientiaPotentiaEstModel.FK_RatingScale_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="RatingScale" EntitySet="RatingScales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Profiles" Association="ScientiaPotentiaEstModel.FK_Tests_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestQuestions_Questions" Association="ScientiaPotentiaEstModel.FK_TestQuestions_Questions">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestAnswers_TestQuestions" Association="ScientiaPotentiaEstModel.FK_TestAnswers_TestQuestions">
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+            <End Role="TestAnswers" EntitySet="TestAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestQuestions_Tests" Association="ScientiaPotentiaEstModel.FK_TestQuestions_Tests">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Student" Association="ScientiaPotentiaEstModel.FK_Tests_Student">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Teacher" Association="ScientiaPotentiaEstModel.FK_Tests_Teacher">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="UsersRoles" Association="ScientiaPotentiaEstModel.UsersRoles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="OrdinalNumber" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="Significance" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Group" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Question" Relationship="ScientiaPotentiaEstModel.FK_Answers_Questions" FromRole="Answers" ToRole="Questions" />
+          <NavigationProperty Name="TestAnswers" Relationship="ScientiaPotentiaEstModel.FK_TestAnswers_Answers" FromRole="Answers" ToRole="TestAnswers" />
+        </EntityType>
+        <EntityType Name="Assign">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="TeacherID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="ProfileID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="ModulID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="TestDate" Type="DateTime" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Group" Relationship="ScientiaPotentiaEstModel.FK_Assign_Groups" FromRole="Assign" ToRole="Groups" />
+          <NavigationProperty Name="Modul" Relationship="ScientiaPotentiaEstModel.FK_Assign_Moduls" FromRole="Assign" ToRole="Moduls" />
+          <NavigationProperty Name="Profile" Relationship="ScientiaPotentiaEstModel.FK_Assign_Profiles" FromRole="Assign" ToRole="Profiles" />
+          <NavigationProperty Name="User" Relationship="ScientiaPotentiaEstModel.FK_Assign_Users" FromRole="Assign" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Assigns" Relationship="ScientiaPotentiaEstModel.FK_Assign_Groups" FromRole="Groups" ToRole="Assign" />
+          <NavigationProperty Name="Users" Relationship="ScientiaPotentiaEstModel.FK_Users_Groups" FromRole="Groups" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Modul">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="SubjectID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Assign" Relationship="ScientiaPotentiaEstModel.FK_Assign_Moduls" FromRole="Moduls" ToRole="Assign" />
+          <NavigationProperty Name="Subject" Relationship="ScientiaPotentiaEstModel.FK_Moduls_Subjects" FromRole="Moduls" ToRole="Subjects" />
+          <NavigationProperty Name="Questions" Relationship="ScientiaPotentiaEstModel.FK_Questions_Moduls" FromRole="Moduls" ToRole="Questions" />
+          <NavigationProperty Name="Tests" Relationship="ScientiaPotentiaEstModel.FK_Tests_Moduls" FromRole="Moduls" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="TimeLimit" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="ShuffleQuestions" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="ShuffleAnswers" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="QuestionsCount" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="MarkType" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Assigns" Relationship="ScientiaPotentiaEstModel.FK_Assign_Profiles" FromRole="Profiles" ToRole="Assign" />
+          <NavigationProperty Name="RatingScales" Relationship="ScientiaPotentiaEstModel.FK_RatingScale_Profiles" FromRole="Profiles" ToRole="RatingScale" />
+          <NavigationProperty Name="Tests" Relationship="ScientiaPotentiaEstModel.FK_Tests_Profiles" FromRole="Profiles" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrdinalNumber" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="Significance" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Type" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="ModulID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Explanation" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Answers" Relationship="ScientiaPotentiaEstModel.FK_Answers_Questions" FromRole="Questions" ToRole="Answers" />
+          <NavigationProperty Name="Modul" Relationship="ScientiaPotentiaEstModel.FK_Questions_Moduls" FromRole="Questions" ToRole="Moduls" />
+          <NavigationProperty Name="TestQuestions" Relationship="ScientiaPotentiaEstModel.FK_TestQuestions_Questions" FromRole="Questions" ToRole="TestQuestions" />
+        </EntityType>
+        <EntityType Name="RatingScale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProfileID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="LowBound" Type="Decimal" Nullable="false" Precision="5" Scale="2" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Profile" Relationship="ScientiaPotentiaEstModel.FK_RatingScale_Profiles" FromRole="RatingScale" ToRole="Profiles" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role1" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="ScientiaPotentiaEstModel.UsersRoles" FromRole="Roles" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Moduls" Relationship="ScientiaPotentiaEstModel.FK_Moduls_Subjects" FromRole="Subjects" ToRole="Moduls" />
+        </EntityType>
+        <EntityType Name="TestAnswer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestQuestionID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="AnswerID" Type="Int32" ConcurrencyMode="Fixed" />
+          <Property Name="OrdinalNumber" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Answer" Relationship="ScientiaPotentiaEstModel.FK_TestAnswers_Answers" FromRole="TestAnswers" ToRole="Answers" />
+          <NavigationProperty Name="TestQuestion" Relationship="ScientiaPotentiaEstModel.FK_TestAnswers_TestQuestions" FromRole="TestAnswers" ToRole="TestQuestions" />
+        </EntityType>
+        <EntityType Name="TestQuestion">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="QuestionID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="OrdinalNumber" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Question" Relationship="ScientiaPotentiaEstModel.FK_TestQuestions_Questions" FromRole="TestQuestions" ToRole="Questions" />
+          <NavigationProperty Name="TestAnswers" Relationship="ScientiaPotentiaEstModel.FK_TestAnswers_TestQuestions" FromRole="TestQuestions" ToRole="TestAnswers" />
+          <NavigationProperty Name="Test" Relationship="ScientiaPotentiaEstModel.FK_TestQuestions_Tests" FromRole="TestQuestions" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ModulID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="TeacherID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="ProfileID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Mode" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Date" Type="DateTime" ConcurrencyMode="Fixed" />
+          <Property Name="Duration" Type="Int64" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="Rating" Type="Decimal" Nullable="false" Precision="5" Scale="2" ConcurrencyMode="Fixed" />
+          <Property Name="TotalRating" Type="Decimal" Nullable="false" Precision="5" Scale="2" ConcurrencyMode="Fixed" />
+          <Property Name="TotalQuestions" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="TotalAnswers" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Modul" Relationship="ScientiaPotentiaEstModel.FK_Tests_Moduls" FromRole="Tests" ToRole="Moduls" />
+          <NavigationProperty Name="Profile" Relationship="ScientiaPotentiaEstModel.FK_Tests_Profiles" FromRole="Tests" ToRole="Profiles" />
+          <NavigationProperty Name="TestQuestions" Relationship="ScientiaPotentiaEstModel.FK_TestQuestions_Tests" FromRole="Tests" ToRole="TestQuestions" />
+          <NavigationProperty Name="Student" Relationship="ScientiaPotentiaEstModel.FK_Tests_Student" FromRole="Tests" ToRole="Users" />
+          <NavigationProperty Name="Teacher" Relationship="ScientiaPotentiaEstModel.FK_Tests_Teacher" FromRole="Tests" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" ConcurrencyMode="Fixed" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="CanceledMark" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="MiddleName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" ConcurrencyMode="Fixed" />
+          <Property Name="GroupID" Type="Int32" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Assigns" Relationship="ScientiaPotentiaEstModel.FK_Assign_Users" FromRole="Users" ToRole="Assign" />
+          <NavigationProperty Name="Group" Relationship="ScientiaPotentiaEstModel.FK_Users_Groups" FromRole="Users" ToRole="Groups" />
+          <NavigationProperty Name="TestsAsStudent" Relationship="ScientiaPotentiaEstModel.FK_Tests_Student" FromRole="Users" ToRole="Tests" />
+          <NavigationProperty Name="TestsAsTeacher" Relationship="ScientiaPotentiaEstModel.FK_Tests_Teacher" FromRole="Users" ToRole="Tests" />
+          <NavigationProperty Name="Roles" Relationship="ScientiaPotentiaEstModel.UsersRoles" FromRole="Users" ToRole="Roles" />
+        </EntityType>
+        <Association Name="FK_Answers_Questions">
+          <End Role="Questions" Type="ScientiaPotentiaEstModel.Question" Multiplicity="1" />
+          <End Role="Answers" Type="ScientiaPotentiaEstModel.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Answers">
+              <PropertyRef Name="QuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestAnswers_Answers">
+          <End Role="Answers" Type="ScientiaPotentiaEstModel.Answer" Multiplicity="0..1" />
+          <End Role="TestAnswers" Type="ScientiaPotentiaEstModel.TestAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Answers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestAnswers">
+              <PropertyRef Name="AnswerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Groups">
+          <End Role="Groups" Type="ScientiaPotentiaEstModel.Group" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Moduls">
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Modul" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moduls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="ModulID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Profiles">
+          <End Role="Profiles" Type="ScientiaPotentiaEstModel.Profile" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assign_Users">
+          <End Role="Users" Type="ScientiaPotentiaEstModel.User" Multiplicity="1" />
+          <End Role="Assign" Type="ScientiaPotentiaEstModel.Assign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Assign">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Groups">
+          <End Role="Groups" Type="ScientiaPotentiaEstModel.Group" Multiplicity="0..1" />
+          <End Role="Users" Type="ScientiaPotentiaEstModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Moduls_Subjects">
+          <End Role="Subjects" Type="ScientiaPotentiaEstModel.Subject" Multiplicity="1" />
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Moduls">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Questions_Moduls">
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Modul" Multiplicity="1" />
+          <End Role="Questions" Type="ScientiaPotentiaEstModel.Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moduls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="ModulID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Moduls">
+          <End Role="Moduls" Type="ScientiaPotentiaEstModel.Modul" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moduls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ModulID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RatingScale_Profiles">
+          <End Role="Profiles" Type="ScientiaPotentiaEstModel.Profile" Multiplicity="1" />
+          <End Role="RatingScale" Type="ScientiaPotentiaEstModel.RatingScale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RatingScale">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Profiles">
+          <End Role="Profiles" Type="ScientiaPotentiaEstModel.Profile" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestQuestions_Questions">
+          <End Role="Questions" Type="ScientiaPotentiaEstModel.Question" Multiplicity="1" />
+          <End Role="TestQuestions" Type="ScientiaPotentiaEstModel.TestQuestion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="QuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestAnswers_TestQuestions">
+          <End Role="TestQuestions" Type="ScientiaPotentiaEstModel.TestQuestion" Multiplicity="1" />
+          <End Role="TestAnswers" Type="ScientiaPotentiaEstModel.TestAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestQuestions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestAnswers">
+              <PropertyRef Name="TestQuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestQuestions_Tests">
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Test" Multiplicity="1" />
+          <End Role="TestQuestions" Type="ScientiaPotentiaEstModel.TestQuestion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="TestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Student">
+          <End Role="Users" Type="ScientiaPotentiaEstModel.User" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Teacher">
+          <End Role="Users" Type="ScientiaPotentiaEstModel.User" Multiplicity="1" />
+          <End Role="Tests" Type="ScientiaPotentiaEstModel.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UsersRoles">
+          <End Role="Roles" Type="ScientiaPotentiaEstModel.Role" Multiplicity="*" />
+          <End Role="Users" Type="ScientiaPotentiaEstModel.User" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ScientiaPotentiaEstModelStoreContainer" CdmEntityContainer="ScientiaPotentiaEstEntities">
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Answer">
+              <MappingFragment StoreEntitySet="Answers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+                <ScalarProperty Name="OrdinalNumber" ColumnName="OrdinalNumber" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Significance" ColumnName="Significance" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Assign">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Assign">
+              <MappingFragment StoreEntitySet="Assign">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="ModulID" ColumnName="ModulID" />
+                <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Group">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Moduls">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Modul">
+              <MappingFragment StoreEntitySet="Moduls">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profiles">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Profile">
+              <MappingFragment StoreEntitySet="Profiles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+                <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
+                <ScalarProperty Name="ShuffleQuestions" ColumnName="ShuffleQuestions" />
+                <ScalarProperty Name="ShuffleAnswers" ColumnName="ShuffleAnswers" />
+                <ScalarProperty Name="QuestionsCount" ColumnName="QuestionsCount" />
+                <ScalarProperty Name="MarkType" ColumnName="MarkType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Question">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrdinalNumber" ColumnName="OrdinalNumber" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Significance" ColumnName="Significance" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ModulID" ColumnName="ModulID" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+                <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RatingScales">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.RatingScale">
+              <MappingFragment StoreEntitySet="RatingScale">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="LowBound" ColumnName="LowBound" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Role1" ColumnName="Role" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Subject">
+              <MappingFragment StoreEntitySet="Subjects">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestAnswers">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.TestAnswer">
+              <MappingFragment StoreEntitySet="TestAnswers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TestQuestionID" ColumnName="TestQuestionID" />
+                <ScalarProperty Name="AnswerID" ColumnName="AnswerID" />
+                <ScalarProperty Name="OrdinalNumber" ColumnName="OrdinalNumber" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestQuestions">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.TestQuestion">
+              <MappingFragment StoreEntitySet="TestQuestions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TestID" ColumnName="TestID" />
+                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+                <ScalarProperty Name="OrdinalNumber" ColumnName="OrdinalNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tests">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.Test">
+              <MappingFragment StoreEntitySet="Tests">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ModulID" ColumnName="ModulID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="TotalRating" ColumnName="TotalRating" />
+                <ScalarProperty Name="TotalQuestions" ColumnName="TotalQuestions" />
+                <ScalarProperty Name="TotalAnswers" ColumnName="TotalAnswers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="ScientiaPotentiaEstModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="CanceledMark" ColumnName="CanceledMark" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="UsersRoles" TypeName="ScientiaPotentiaEstModel.UsersRoles" StoreEntitySet="UsersRoles">
+            <EndProperty Name="Roles">
+              <ScalarProperty Name="ID" ColumnName="RoleID" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="ID" ColumnName="UserID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ScientiaPotentiaEstModel">
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Answer" Width="1.5" PointX="11.125" PointY="0.5" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Assign" Width="1.5" PointX="3.5" PointY="3.875" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Group" Width="1.5" PointX="0.5" PointY="4.25" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Modul" Width="1.5" PointX="6" PointY="0.5" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Profile" Width="1.5" PointX="1.125" PointY="7.375" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Question" Width="1.5" PointX="8.375" PointY="0.5" Height="3.1340950520833326" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.RatingScale" Width="1.5" PointX="4.5" PointY="9.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Role" Width="1.5" PointX="0.5" PointY="1.625" Height="2.1725878906249991" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Subject" Width="1.5" PointX="3.375" PointY="0.5" Height="1.7879850260416692" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.TestAnswer" Width="1.5" PointX="13.625" PointY="3.875" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.TestQuestion" Width="1.5" PointX="11.375" PointY="4.25" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.Test" Width="1.5" PointX="9.125" PointY="4.375" Height="4.2879036458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientiaPotentiaEstModel.User" Width="1.5" PointX="5.5" PointY="4.625" Height="3.7109993489583388" IsExpanded="true" />
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Answers_Questions" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.875" PointY="1.8747460937499998" />
+          <ConnectorPoint PointX="11.125" PointY="1.8747460937499998" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_TestAnswers_Answers" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.625" PointY="1.8747460937499998" />
+          <ConnectorPoint PointX="14.375" PointY="1.8747460937499998" />
+          <ConnectorPoint PointX="14.375" PointY="3.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Assign_Groups" ManuallyRouted="false">
+          <ConnectorPoint PointX="2" PointY="5.2401432291666659" />
+          <ConnectorPoint PointX="3.5" PointY="5.2401432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Assign_Moduls" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.1406225" PointY="3.0571907552083317" />
+          <ConnectorPoint PointX="7.1406225" PointY="4.21875" />
+          <ConnectorPoint PointX="5.802083333333333" PointY="4.2187499999999991" />
+          <ConnectorPoint PointX="5.635416666666667" PointY="4.21875" />
+          <ConnectorPoint PointX="5" PointY="4.21875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Assign_Profiles" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.625" PointY="8.2438486614583315" />
+          <ConnectorPoint PointX="3.96875" PointY="8.2438486614583315" />
+          <ConnectorPoint PointX="3.96875" PointY="6.8167936197916665" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Assign_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.5" PointY="5.7208968098958337" />
+          <ConnectorPoint PointX="5" PointY="5.7208968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Users_Groups" ManuallyRouted="false">
+          <ConnectorPoint PointX="0.78125" PointY="6.2302864583333317" />
+          <ConnectorPoint PointX="0.78125" PointY="7.0958968098958337" />
+          <ConnectorPoint PointX="3.8854166666666665" PointY="7.0958968098958328" />
+          <ConnectorPoint PointX="4.052083333333333" PointY="7.0958968098958337" />
+          <ConnectorPoint PointX="5.5" PointY="7.0958968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Moduls_Subjects" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.875" PointY="1.3939925130208346" />
+          <ConnectorPoint PointX="6" PointY="1.3939925130208346" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Questions_Moduls" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="1.7785953776041659" />
+          <ConnectorPoint PointX="8.375" PointY="1.7785953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Tests_Moduls" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.28125" PointY="3.0571907552083317" />
+          <ConnectorPoint PointX="7.28125" PointY="8.5307014973958353" />
+          <ConnectorPoint PointX="9.125" PointY="8.5307014973958353" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_RatingScale_Profiles" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.625" PointY="10.129547526041666" />
+          <ConnectorPoint PointX="4.5" PointY="10.129547526041666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Tests_Profiles" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.625" PointY="9.1752023229166646" />
+          <ConnectorPoint PointX="9.875" PointY="9.1752023229166646" />
+          <ConnectorPoint PointX="9.875" PointY="8.6629036458333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_TestQuestions_Questions" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.875" PointY="3.4730436197916661" />
+          <ConnectorPoint PointX="12.78125" PointY="3.4730436197916661" />
+          <ConnectorPoint PointX="12.78125" PointY="4.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_TestAnswers_TestQuestions" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.875" PointY="5.2449446614583337" />
+          <ConnectorPoint PointX="13.625" PointY="5.2449446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_TestQuestions_Tests" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.625" PointY="5.4949446614583337" />
+          <ConnectorPoint PointX="11.375" PointY="5.4949446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Tests_Student" ManuallyRouted="false">
+          <ConnectorPoint PointX="7" PointY="6.4804996744791694" />
+          <ConnectorPoint PointX="7.197916666666667" PointY="6.4804996744791685" />
+          <ConnectorPoint PointX="7.364583333333333" PointY="6.4804996744791694" />
+          <ConnectorPoint PointX="9.125" PointY="6.4804996744791694" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.FK_Tests_Teacher" ManuallyRouted="false">
+          <ConnectorPoint PointX="7" PointY="5.4902498372395847" />
+          <ConnectorPoint PointX="7.197916666666667" PointY="5.4902498372395838" />
+          <ConnectorPoint PointX="7.364583333333333" PointY="5.4902498372395847" />
+          <ConnectorPoint PointX="9.125" PointY="5.4902498372395847" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScientiaPotentiaEstModel.UsersRoles" ManuallyRouted="false">
+          <ConnectorPoint PointX="2" PointY="3.4586393229166656" />
+          <ConnectorPoint PointX="5.71875" PointY="3.4586393229166656" />
+          <ConnectorPoint PointX="5.71875" PointY="4.625" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddButton" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AdditionalFieldsGroupBox" xml:space="preserve">
+    <value>Дополнительные поля</value>
+  </data>
+  <data name="AuthenticationGroupBox" xml:space="preserve">
+    <value>Идентификация</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="CanceledMarkCheckBox" xml:space="preserve">
+    <value>Статус записи</value>
+  </data>
+  <data name="CloseButton" xml:space="preserve">
+    <value>Закрить</value>
+  </data>
+  <data name="DeGroupingButton" xml:space="preserve">
+    <value>Разгруппировать</value>
+  </data>
+  <data name="DownButton" xml:space="preserve">
+    <value>Вниз</value>
+  </data>
+  <data name="EditButton" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="EmailLabel" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="ForgotPasswordButton" xml:space="preserve">
+    <value>Забыл пароль</value>
+  </data>
+  <data name="GroupingButton" xml:space="preserve">
+    <value>Группировать</value>
+  </data>
+  <data name="GroupLabel" xml:space="preserve">
+    <value>Группа:</value>
+  </data>
+  <data name="InputCodeLabel" xml:space="preserve">
+    <value>Введите код:</value>
+  </data>
+  <data name="InputNewPasswordLabel" xml:space="preserve">
+    <value>Введите новый пароль:</value>
+  </data>
+  <data name="InputUsernameLabel" xml:space="preserve">
+    <value>Введите Имя пользователя:</value>
+  </data>
+  <data name="LearningModeRadioButton" xml:space="preserve">
+    <value>Обучение</value>
+  </data>
+  <data name="MiddleNameLabel" xml:space="preserve">
+    <value>Отчество:</value>
+  </data>
+  <data name="ModulActionWindowTitle" xml:space="preserve">
+    <value>Окно модуля действия</value>
+  </data>
+  <data name="ModulsButton" xml:space="preserve">
+    <value>Модуль</value>
+  </data>
+  <data name="ModulsWindowTitle" xml:space="preserve">
+    <value>Окно модуля</value>
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>Имя:</value>
+  </data>
+  <data name="NextStepButton" xml:space="preserve">
+    <value>Следующий шаг</value>
+  </data>
+  <data name="OKButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="ProfileDataWindowTitle" xml:space="preserve">
+    <value>Окно профиля данных</value>
+  </data>
+  <data name="ProfilesWindowTitle" xml:space="preserve">
+    <value>Окно профиля</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Зарегистрировать</value>
+  </data>
+  <data name="RegisterNewAccountButton" xml:space="preserve">
+    <value>Зарегистрировать новый аккаунт</value>
+  </data>
+  <data name="RegisterNewUserTitle" xml:space="preserve">
+    <value>Регистрация нового пользователя</value>
+  </data>
+  <data name="RemoveButton" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="RequiredFieldsGroupBox" xml:space="preserve">
+    <value>Обязательные поля</value>
+  </data>
+  <data name="ResetUserPasswordTitle" xml:space="preserve">
+    <value>Сброс пароля пользователя</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="SaveNewPasswordButton" xml:space="preserve">
+    <value>Сохранить новый пароль</value>
+  </data>
+  <data name="ScientiaPotentiaEstTitle" xml:space="preserve">
+    <value>Знание - сила</value>
+  </data>
+  <data name="SetModeWindowTitle" xml:space="preserve">
+    <value>Окно установки режима</value>
+  </data>
+  <data name="SetSubjectGroupBox" xml:space="preserve">
+    <value>Выберите предмет</value>
+  </data>
+  <data name="SetSubjectWindowTitle" xml:space="preserve">
+    <value>Окно выбора предмета</value>
+  </data>
+  <data name="SetTestModeGroupBox" xml:space="preserve">
+    <value>Выберите режим теста</value>
+  </data>
+  <data name="SignInButton" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="StatisticStudentWindowTitle" xml:space="preserve">
+    <value>Окно статистики студента</value>
+  </data>
+  <data name="StepOneGroupBox" xml:space="preserve">
+    <value>Шаг 1</value>
+  </data>
+  <data name="StepTwoGroupBox" xml:space="preserve">
+    <value>Шаг 2</value>
+  </data>
+  <data name="SubjectActionWindoTitle" xml:space="preserve">
+    <value>Окно действия предмета</value>
+  </data>
+  <data name="SubjectLabel" xml:space="preserve">
+    <value>Предмет</value>
+  </data>
+  <data name="SubjectsWindowTitle" xml:space="preserve">
+    <value>Окно предмета</value>
+  </data>
+  <data name="SurnameLabel" xml:space="preserve">
+    <value>Фамилия:</value>
+  </data>
+  <data name="TeacherCheckBox" xml:space="preserve">
+    <value>Я учитель</value>
+  </data>
+  <data name="TestingModeRadioButton" xml:space="preserve">
+    <value>Тест</value>
+  </data>
+  <data name="UpButton" xml:space="preserve">
+    <value>Вверх</value>
+  </data>
+  <data name="UsernameLabel" xml:space="preserve">
+    <value>Пользователь:</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>В начало</value>
+  </data>
+  <data name="CancelTest" xml:space="preserve">
+    <value>Отменить тест</value>
+  </data>
+  <data name="CorrectAnswersLabel" xml:space="preserve">
+    <value>Правильные ответы: </value>
+  </data>
+  <data name="CreatedByLabel" xml:space="preserve">
+    <value>создал</value>
+  </data>
+  <data name="DateDataGrid" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="DetailButton" xml:space="preserve">
+    <value>Детально...</value>
+  </data>
+  <data name="DetailsDataGrid" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+  <data name="FinishTest" xml:space="preserve">
+    <value>Закончить тест</value>
+  </data>
+  <data name="IsPassedLabel" xml:space="preserve">
+    <value>Результат: </value>
+  </data>
+  <data name="NavigtionMenuItem" xml:space="preserve">
+    <value>_Навигация</value>
+  </data>
+  <data name="NextButton" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="PrevButton" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="ProfileButton" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="QuestionsGroupBox" xml:space="preserve">
+    <value>Вопросы</value>
+  </data>
+  <data name="ResultDataGrid" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+  <data name="SetMode" xml:space="preserve">
+    <value>Режим</value>
+  </data>
+  <data name="SetSubject" xml:space="preserve">
+    <value>Предмет</value>
+  </data>
+  <data name="SettingMenuItem" xml:space="preserve">
+    <value>_Настройки</value>
+  </data>
+  <data name="SignOutButton" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="StartTest" xml:space="preserve">
+    <value>Начать тест</value>
+  </data>
+  <data name="StatisticButton" xml:space="preserve">
+    <value>Статистика</value>
+  </data>
+  <data name="StatisticsTest" xml:space="preserve">
+    <value>Статистика</value>
+  </data>
+  <data name="StatisticTestWindowTitle" xml:space="preserve">
+    <value>Окно статистики теста</value>
+  </data>
+  <data name="TeacherNameDataGrid" xml:space="preserve">
+    <value>Учитель</value>
+  </data>
+  <data name="TestForLabel" xml:space="preserve">
+    <value>Тест по</value>
+  </data>
+  <data name="TESTINGButton" xml:space="preserve">
+    <value>ТЕСТИРОВАНИЕ</value>
+  </data>
+  <data name="TestingWindowTitle" xml:space="preserve">
+    <value>Окно тестирования</value>
+  </data>
+  <data name="TestMenuItem" xml:space="preserve">
+    <value>_Тест</value>
+  </data>
+  <data name="TitleDataGrid" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="UserInfoGroupBox" xml:space="preserve">
+    <value>Информация о пользователе</value>
+  </data>
+  <data name="UserLabel" xml:space="preserve">
+    <value>Студент:</value>
+  </data>
+  <data name="IsCorrectDataGrid" xml:space="preserve">
+    <value>Правильно</value>
+  </data>
+  <data name="OrdinalNumberDataGrid" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="AssignDataWindowTitle" xml:space="preserve">
+    <value>Окно назначения данных</value>
+  </data>
+  <data name="AssignWindowTitle" xml:space="preserve">
+    <value>Окно назначения</value>
+  </data>
+  <data name="RatingScaleDataWindowTitle" xml:space="preserve">
+    <value>Окно шкалы данных</value>
+  </data>
+  <data name="RatingScalesWindowTitle" xml:space="preserve">
+    <value>Окно шкалы</value>
+  </data>
+  <data name="ShowRatingScalesButton" xml:space="preserve">
+    <value>Показать шкалу</value>
+  </data>
+  <data name="TestPassedNo" xml:space="preserve">
+    <value>Провален</value>
+    <comment>Result of testing on StatisticTestWindow</comment>
+  </data>
+  <data name="TestPassedYes" xml:space="preserve">
+    <value>Сдан</value>
+    <comment>Result of testing on StatisticTestWindow</comment>
+  </data>
+  <data name="QuestionPassedNo" xml:space="preserve">
+    <value>Нет</value>
+    <comment>Result of question on TestStatisticDataModel</comment>
+  </data>
+  <data name="QuestionPassedYes" xml:space="preserve">
+    <value>Да</value>
+    <comment>Result of question on TestStatisticDataModel</comment>
+  </data>
+  <data name="DetailStatisticButton" xml:space="preserve">
+    <value>Подробнее...</value>
+    <comment>Button on global statistic for open detail test statistic</comment>
+  </data>
+  <data name="CorrectAnswerButton" xml:space="preserve">
+    <value>Показать ответ</value>
+  </data>
+  <data name="GroupNameDataGrid" xml:space="preserve">
+    <value>Группа</value>
+  </data>
+  <data name="StudentNameDataGrid" xml:space="preserve">
+    <value>Студент</value>
+  </data>
+  <data name="TeacherWindowTitle" xml:space="preserve">
+    <value>Окно учителя</value>
+  </data>
+</root>

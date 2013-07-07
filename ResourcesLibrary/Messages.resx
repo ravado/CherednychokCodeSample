@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CaptionRegistered" xml:space="preserve">
+    <value>Registered</value>
+  </data>
+  <data name="CaptionWarning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="CodeNotValid" xml:space="preserve">
+    <value>Secret code is not valid</value>
+  </data>
+  <data name="CodePasswordNotCorrect" xml:space="preserve">
+    <value>Secret code or new password is not correct.</value>
+  </data>
+  <data name="EmailIncorrect" xml:space="preserve">
+    <value>Email is incorrect. User correct email: example@mail.com</value>
+  </data>
+  <data name="EmailSentCode" xml:space="preserve">
+    <value>To your email sent a secret code.</value>
+  </data>
+  <data name="FunctionNotImplemented" xml:space="preserve">
+    <value>Function not implemented</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group #{0} {1} - {2} canceled mark: {3}</value>
+  </data>
+  <data name="GroupNotLeastThreeSymbols" xml:space="preserve">
+    <value>Group name can contain minimum 3 letters and numbers, or such splitters as  '-', '_', ' '</value>
+  </data>
+  <data name="InitializationNotImplementedDM" xml:space="preserve">
+    <value>Initialization mechanism is not implemented for the data model.</value>
+  </data>
+  <data name="MiddleNameOnlyLettersToThirty" xml:space="preserve">
+    <value>MiddleName can contain only letters (from 1 to 30)</value>
+  </data>
+  <data name="NameOnlyLettersToThirty" xml:space="preserve">
+    <value>Name can contain only letters (from 1 to 30)</value>
+  </data>
+  <data name="NewPasswordNotValid" xml:space="preserve">
+    <value>New Password is not valid</value>
+  </data>
+  <data name="NewTestDateYourTeacher" xml:space="preserve">
+    <value>You have new test - {0}\n Testing date is {1}\n Your teacher is {2}</value>
+  </data>
+  <data name="NotTestMode" xml:space="preserve">
+    <value>You do not select the test mode! Set to the default test - Learning.</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Password successfully changed.</value>
+  </data>
+  <data name="PasswordNotLeastSixSymbols" xml:space="preserve">
+    <value>Password must contain at least 6 symbols</value>
+  </data>
+  <data name="PasswordNotValid" xml:space="preserve">
+    <value>Password is not valid</value>
+  </data>
+  <data name="QuestionNotFound" xml:space="preserve">
+    <value>Test question not found.</value>
+  </data>
+  <data name="RegisterSuccessfull" xml:space="preserve">
+    <value>Register was successfull, please login now.</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role #{0} {1} - {2}</value>
+  </data>
+  <data name="StudentNotGroup" xml:space="preserve">
+    <value>Student must have a group!</value>
+  </data>
+  <data name="SurnameOnlyLettersToThirty" xml:space="preserve">
+    <value>Surname can contain only letters (from 1 to 30)</value>
+  </data>
+  <data name="TestEnd" xml:space="preserve">
+    <value>The test is complete.</value>
+  </data>
+  <data name="TestStatistic" xml:space="preserve">
+    <value>Test '{0}' of '{1}'\n  {2}\n Student: {3} from {4}\n Correct answers: {5}/{6}\n Result: {7}</value>
+  </data>
+  <data name="TimeEnd" xml:space="preserve">
+    <value>Time for completion of the test is over.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User #{0}, username: {1} email: {2}\n Role: {3}</value>
+  </data>
+  <data name="UserAlreadyToken" xml:space="preserve">
+    <value>Such username already token, try another.</value>
+  </data>
+  <data name="UserLeastFourSymbols" xml:space="preserve">
+    <value>Username must contain at least 4 symbols (letters, numbers and '-', '_', '.')</value>
+  </data>
+  <data name="UserNotCorrect" xml:space="preserve">
+    <value>Username is not correct.</value>
+  </data>
+  <data name="UserNotRegistered" xml:space="preserve">
+    <value>This Username is not registered in application.</value>
+  </data>
+  <data name="UserNotValid" xml:space="preserve">
+    <value>Username is not valid</value>
+  </data>
+  <data name="UserPasswordNotCorrect" xml:space="preserve">
+    <value>Username or Password is not correct.</value>
+  </data>
+  <data name="UserPasswordNotFound" xml:space="preserve">
+    <value>This bunch Username and Password not found.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+</root>
