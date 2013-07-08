@@ -1,0 +1,134 @@
+﻿/*#region footer stay on bottom */
+html, body, .wrapper {height: 100%;}
+body > .wrapper {
+    height: auto;
+    min-height: 100%;
+}
+.main {
+    padding-bottom: 150px;
+}
+footer {
+    position: relative;
+    margin-top: -100px;
+    height: 100px;
+    clear: both;
+}
+/*#endregion */
+
+form {
+    margin:0;
+}
+header {
+    height: 25px;
+    padding: 20px 0;
+}
+.fixed-header {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.centered-box {}
+footer{
+    background: #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+}
+    footer .inner {
+        width: 980px;
+        margin: 0 auto;
+        padding:10px;
+        color: #bbb;
+    }
+
+.main 
+{
+    width: 980px;
+    margin: 0 auto;
+}
+.auth-login {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding:10px 20px;
+}
+.box 
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.filtering-emails 
+{
+}
+
+.letter-redact {
+    padding: 20px 0;
+}
+    .letter-redact input {
+        margin-bottom: 20px;  
+        width: 940px; 
+    }
+
+/*#region customer pages */
+.customer-data div.span3:first-child{
+    margin-left:0;
+}
+.customer-data {
+    margin-bottom: 15px;
+}
+
+
+/*#endregion */
+
+/* main promo page */
+.promo-box {
+    margin-bottom: 30px;
+}
+.promo-pic-container {
+    float:left;    
+}
+.promo-text-container {
+    float:right;    
+    margin-top: 20px;
+}
+.section-title {
+    letter-spacing: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 5px;
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+}
+.section-title span {
+    background: #fff;
+    padding: 0 15px;
+}
+/* advantage block */
+.advantages-container img {
+    display: block;
+    margin:10px auto;    
+    height: 200px;    
+}
+.advantage-item {
+    box-sizing:border-box;
+    padding: 30px;
+}
+.advantage-title {
+    font-size: 20px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/*#region validation */
+.field-validation-error {
+    color: red;
+}
+
+
+/*#endregion */

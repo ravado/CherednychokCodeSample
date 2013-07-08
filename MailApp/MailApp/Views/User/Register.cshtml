@@ -1,0 +1,43 @@
+﻿@model MailApp.ViewModels.User.UserRegisterViewModel
+
+@{
+    Model.Title = "Register";
+    Layout = "~/Views/Shared/_Base.cshtml";
+}
+
+<div class="register-box auth-login">
+    <legend>Register</legend>
+    @using (Html.BeginForm("Register", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.ValidationSummary(true)
+        <div class="control-group">
+            @Html.LabelFor(model => model.Username, new { @class = "control-label"})            
+            <div class="controls">
+                @Html.EditorFor(model => model.Username)
+                @Html.ValidationMessageFor(model => model.Username)          
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Email, new { @class = "control-label" })            
+            <div class="controls">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Password, new { @class = "control-label" })            
+            <div class="controls">
+                @Html.PasswordFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+        <div class="control-group">        
+              <div class="controls">     
+                  <div class="pull-right">
+                    @Html.ActionLink("Go to Auth", "Login", "User", null, new { @class = "btn" })
+                    <button type="submit" class="btn btn-primary">Register</button>                    
+                  </div>           
+              </div>
+        </div>
+    }
+</div>

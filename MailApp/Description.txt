@@ -1,0 +1,5 @@
+Simply Mail Sender to a selected customers in db.
+
+full_db.sql contain full schema of MailStoredge db, and some fake data.
+For Login on the site you can use administrator account (login and password - "admin")
+or register a new account.

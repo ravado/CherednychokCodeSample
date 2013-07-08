@@ -1,0 +1,115 @@
+﻿@model MailApp.ViewModels.Mail.MailSelectCustomersViewModel
+
+@{
+    Model.Title =  "Mail Sender - Select Customers";
+    Layout = "~/Views/Shared/_Base.cshtml";
+}
+
+<section class="centered-box box filtering-emails">
+    <legend>Filtering Mails</legend>
+    @using (Html.BeginForm("WriteLetter", "Mail", FormMethod.Post, new { @class = "form-inline", @id="select-customers-form" }))
+    {
+        @Html.TextBoxFor(m => m.Company, new { @placeholder = "Company" })
+        <a class="btn btn-primary filter-customers">Filter</a>
+        <table class="table table-stripered table-hover email-list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Contact Name</th>
+                    <th>Company</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var customer in Model.Customers)
+                {
+                    <tr>
+                        <td>@customer.Id</td>
+                        <td>@customer.CustomerName</td>
+                        <td>@customer.CompanyName</td>
+                        <td>@customer.Email</td>
+                        <td><input type="checkbox" class="chk-email" name="id_customer" value="@customer.Id"/></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        
+        <a class="btn check-all-emails">Check All</a>
+        <a class="btn uncheck-all-emails">Uncheck All</a>
+        
+        <a class="btn btn-primary to-second-step pull-right">Second Step</a>
+    }
+
+</section>
+<script type="text/javascript">
+
+    function fillTable(obj) {
+        var curr_table = $(".email-list tbody");
+        curr_table.empty(); // clear table data for ne elements
+        for (var i = 0; i < obj.length; i++) {
+            var complete_row = "";
+            console.log("build element");
+            complete_row += "<tr>" +
+                "<td>" + obj[i].Id + "</td>" +
+                "<td>" + obj[i].CustomerName + "</td>" +
+                "<td>" + obj[i].CompanyName + "</td>" +
+                "<td>" + obj[i].Email + "</td>" +
+                "<td><input type='checkbox' class='chk-email' name='id_customer' value='" + obj[i].Id + "'/></td></tr>";
+            curr_table.append(complete_row);
+        }
+    }
+
+    $(document).ready(function () {
+        $(".check-all-emails").click(function () {
+            var s = $(".email-list .chk-email");
+            console.log("checked");
+            $(".email-list .chk-email").prop("checked", true);
+        });
+
+        $(".uncheck-all-emails").click(function () {
+            var s = $(".email-list .chk-email");
+            console.log("unchecked");
+            $(".email-list .chk-email").prop("checked", false);
+        });
+
+
+        // autocomplete search query
+        $("#Company").autocomplete({
+            source: "/Mail/AutocompleteCompanies",
+            minLength: 1,
+            select: function (event, ui) {
+                console.log("selected");
+                console.log(ui);
+            }
+        });
+
+        // filtering customers
+        $(".filter-customers").click(function () {
+            var inp_company = $("#Company");
+            //var query = {companies:""};
+            var company = inp_company.val();
+            $.ajax({
+                type: "POST", async: true, data: "company=" + company, url: "/Mail/FilterCustomers/", dataType: "json",
+                success: function (data) {
+                    console.info(data);
+                    fillTable(data);
+                },
+                error: function () {
+                    alert('error in ajax query when try to filter customers');
+                }
+            });
+        });
+
+        // go to second step if at least one customer is checked
+        $(".to-second-step").click(function () {
+            if ($(".chk-email:checked").length == 0) {
+                alert("must be chek at least one customer");
+                return false;
+            } else {
+                $("#select-customers-form").submit();
+            }
+        });
+    });
+</script>

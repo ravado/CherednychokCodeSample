@@ -1,0 +1,58 @@
+﻿@model MailApp.ViewModels.Home.HomeIndexViewModel
+
+@{
+    ViewBag.Title = "Mail Sender";
+    Layout = "~/Views/Shared/_Base.cshtml";
+}
+
+<h1>Mail Sender</h1>
+
+<section class="promo-box clearfix">
+    <div class="span4 promo-pic-container">
+        <img src="~/Content/images/mail-icon-3.png" />
+    </div>
+    <div class="span8 promo-text-container">
+      <h1 class="neopolitan-copy-title">
+        Easy Email Notifications
+      </h1>
+      <p class="neopolitan-copy-subtitle">
+        3 million people use Mail Sender. Sign up and join them today.
+      </p>
+      <p class="neopolitan-copy-description">
+        Mail Sender helps you design email newsletters, share them on social networks, integrate with services you already use, and track your results. It's like your own personal publishing&nbsp;platform.
+      </p>
+        @Html.ActionLink("Sign Up Free", "Register", new { controller = "User" }, new {@class="btn btn-primary btn-large" })
+    </div>
+</section>
+
+<section class="advantages-container">
+    <div class="section-title">
+        <span> Our Advantages  </span>
+    </div>
+
+    <div class="span4 box advantage-item">
+        <div><img src="~/Content/images/safe-icon.png" /></div>
+        <div class="advantage-title">Security</div>
+        <div class="advantage-text">
+            <p>We focused on safety and reliability, and use encrypted connections to servers, saving your data, parallel to save copies of documents.</p>
+        </div>
+    </div>
+    <div class="span4 box advantage-item">
+        <div>
+            <img src="~/Content/images/stopwatch.png" />
+        </div>
+        <div class="advantage-title">Fast delivery</div>
+        <div class="advantage-text">
+            <p>It does not matter how many letters you want to send to your customers, our quick and efficiency mail servers will deliver your message very quick.</p>
+        </div>
+    </div>
+    <div class="span4 box advantage-item">
+        <div>
+            <img src="~/Content/images/serach-icon.png" />
+        </div>
+        <div class="advantage-title">Easy search</div>
+        <div class="advantage-text">
+            <p>You will always find letter what your looking for, thanks to the search engine, which allows you to search for all e-mail directly.</p>
+        </div>
+    </div>
+</section>

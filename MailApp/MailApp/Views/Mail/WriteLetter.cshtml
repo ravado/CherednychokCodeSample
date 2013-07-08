@@ -1,0 +1,65 @@
+﻿@model MailApp.ViewModels.Mail.MailWriteLetterViewModel
+
+@{
+    Model.Title = "WriteLetter";
+    
+    Layout = "~/Views/Shared/_Base.cshtml";
+}
+
+<link href="~/Content/redactor.css" rel="stylesheet" />
+<script src="~/Scripts/redactor.min.js"></script>
+<script src="~/Scripts/ru.js"></script>
+<section class="centered-box box filtering-emails">
+    <legend>Write mail</legend>
+    @using (Html.BeginForm("SendMail", "Mail", FormMethod.Post, new { @class = "form-inline", @id="send-mail-form" }))
+    {
+        <p>Send to:</p>
+        <div class="clearfix">
+            @foreach(var customer in Model.CustomersToSend) {
+                <span class="label label-info">@customer.Email</span>
+                <input type="hidden" value="@customer"/>
+            }
+        </div>
+        
+        <section class="letter-redact">
+            @Html.TextBoxFor(m => m.Header, new { @placeholder="Theme of the letter", @class="span9" })
+            @Html.TextAreaFor(m => m.Text, new { @placeholder="Text of letter", @id="text"})            
+        </section>
+        
+        <div class="clearfix">
+            @Html.ActionLink("Prev Step", "SelectCustomers", new { controller = "Mail" }, new { @class = "btn btn-primary filter-customers" })            
+            <a class="btn btn-primary send-mail pull-right">Send Mail</a>
+        </div>
+    }
+
+</section>
+
+<script>
+    function initRedactor() {
+        var buttons = ['formatting', '|', 'bold', 'italic', 'deleted', '|',
+            'unorderedlist', 'orderedlist', 'outdent', 'indent', '|','table', 'link', '|',
+            'fontcolor', 'backcolor', '|', 'alignment'];
+        $('#text').redactor({
+            buttons: buttons,
+            lang: 'ru'
+        });
+    }
+
+    $(document).ready(function () {
+        initRedactor();
+
+        // check if leter is not empty
+        $(".send-mail").click(function () {
+            var ob = { text: null, title: null, form:null }
+            ob.title = $(".letter-title");
+            ob.text = $("#text");
+            ob.form = $("#send-mail-form");
+
+            if ((ob.title.val() == "") || (ob.text.getText() == "")) {
+                alert("Must enter some title, and letter text");
+            } else {
+                ob.form.submit();
+            }
+        });
+    })
+</script>

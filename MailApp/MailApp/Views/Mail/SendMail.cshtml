@@ -1,0 +1,8 @@
+﻿@model MailApp.ViewModels.Mail.MailSendViewModel
+@{
+    Model.Title = "Mail Sender - Mails added to queue";
+    Layout = "~/Views/Shared/_Base.cshtml";
+}
+
+<h2>Mail was added to queue</h2>
+<p>They will be delivered as quickly as possible. Now you can @Html.ActionLink("write some others letter", "SelectCustomers", "Mail").</p>

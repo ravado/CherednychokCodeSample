@@ -7,7 +7,6 @@ namespace CommonLibrary.Interfaces
     /// <summary>
     /// Interface for data services
     /// </summary>
-    /// <author>Dmitry Zhemkov</author>
     /// <date>22 April 2013</date>
     public interface IDataService<T>
     {

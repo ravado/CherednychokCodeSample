@@ -1,0 +1,36 @@
+﻿@model MailApp.ViewModels.Customer.CustomerIndexViewModel
+
+@{
+    Model.Title = "All Customers";
+    Layout = "~/Views/Shared/_Base.cshtml";
+}
+
+<section class="centered-box box customers-list">
+    <legend>All Customers</legend>
+        
+        <table class="table table-stripered table-hover email-list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Contact Name</th>
+                    <th>Company</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var customer in Model.Customers)
+                {
+                    <tr>
+                        <td>@customer.Id</td>
+                        <td>@customer.CustomerName</td>
+                        <td>@customer.CompanyName</td>
+                        <td>@customer.Email</td>                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+        
+        @Html.ActionLink("Add New Customer", "Add", new { controller = "Customer" }, new { @class="btn" })
+
+</section>

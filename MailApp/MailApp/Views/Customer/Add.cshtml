@@ -1,0 +1,47 @@
+﻿@model MailApp.ViewModels.Customer.CustomerAddViewModel
+
+@{
+    Model.Title = "Add";
+    Layout = "~/Views/Shared/_Base.cshtml";
+}
+<p>@Model.Message</p>
+<section class="centered-box box">
+    <legend>Add New Customer</legend>
+    @using (Html.BeginForm("Add", "Customer", FormMethod.Post, new { @class = "form-inline", @id = "add-customer-form" }))
+    {
+        <section class="customer-data clearfix">
+            <div class="span3">
+                @Html.TextBoxFor(m => m.NewCustomer.CustomerName, new {@class="", @placeholder="Customer Name" })
+                @Html.ValidationMessageFor(m => m.NewCustomer.CustomerName)
+            </div>
+        
+            <div class="span3">
+                @Html.TextBoxFor(m => m.NewCustomer.CompanyName,  new {@class="", @placeholder="Company Name" })
+                @Html.ValidationMessageFor(m => m.NewCustomer.CompanyName)
+            </div>
+        
+            <div class="span3">
+                @Html.TextBoxFor(m => m.NewCustomer.Email,  new {@class="", @placeholder="Email" })
+                @Html.ValidationMessageFor(m => m.NewCustomer.Email)
+            </div>
+        
+            <div class="span3">
+                @Html.TextBoxFor(m => m.NewCustomer.RegistrationDate,  new {@class="datepicker", @placeholder="Date" })
+                @Html.ValidationMessageFor(m => m.NewCustomer.RegistrationDate)
+            </div>
+        </section>
+     
+        <input type="submit" class="btn" value="Create">
+    }
+
+</section>
+<script>
+    $(document).ready(function () {
+        $.datepicker.setDefaults($.datepicker.regional["en"]);
+
+        $(".datepicker").datepicker({
+            dateFormat:"dd/mm/yy"
+        });
+    });
+
+</script>

@@ -10,7 +10,6 @@ namespace CommonLibrary
     /// <summary>
     /// Class for data validation
     /// </summary>
-    /// /// <autor>Evgeny Drapoguz</autor>
     /// <date>24 April 2013</date>
     public static class Validation
     {
